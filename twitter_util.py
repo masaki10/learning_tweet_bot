@@ -1,15 +1,14 @@
 from requests_oauthlib import OAuth1Session
-import config as cf
 import tweepy
 
 class TwitterUtil:
 
     def __init__(self):
-        self.client = tweepy.Client(bearer_token    = cf.BEARER_TOKEN,
-                           consumer_key    = cf.API_KEY,
-                           consumer_secret = cf.API_KEY_SECRET,
-                           access_token    = cf.ACCESS_TOKEN,
-                           access_token_secret = cf.ACCESS_TOKEN_SECRET,
+        self.client = tweepy.Client(bearer_token    = BEARER_TOKEN,
+                           consumer_key    = API_KEY,
+                           consumer_secret = API_KEY_SECRET,
+                           access_token    = ACCESS_TOKEN,
+                           access_token_secret = ACCESS_TOKEN_SECRET,
                           )
 
     def post(self, content):

@@ -1,6 +1,5 @@
 import csv
 from twitter_util import TwitterUtil
-import config as cf
 
 if __name__ == "__main__":
     print("hello world")
@@ -16,7 +15,7 @@ if __name__ == "__main__":
     #ツイート取得
     tweet_data = olddic
     count=0
-    for uid in cf.USERS:
+    for uid in USERS:
         for tweet in tw.get_tweets_from_user(uid):
             if count==0:
                 new_id=tweet.id
