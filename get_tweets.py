@@ -19,6 +19,7 @@ if __name__ == "__main__":
     users = [os.environ["USER1"], os.environ["USER2"], os.environ["USER3"], os.environ["USER4"], os.environ["USER5"], os.environ["USER6"], os.environ["USER7"], os.environ["USER8"], os.environ["USER9"]]
     for uid in users:
         for tweet in tw.get_tweets_from_user(uid):
+            print(tweet)
             if count==0:
                 new_id=tweet.id
             if int(tweet.id)>int("".join(old_id)):
